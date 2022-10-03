@@ -6,3 +6,12 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+*.pyc
+*.pth
+*.tex
+*.txt
+*.ipynb
+*.log
+*/__pycache__/
+*/.idea/
+*/.DS_Store/
