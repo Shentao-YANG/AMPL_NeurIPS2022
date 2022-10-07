@@ -15,7 +15,7 @@ if __name__ == "__main__":
     envs_list = [
         # (env_name, fixed_rollout_len, noise_dim, alpha)
         ('halfcheetah-medium-expert-v2', 5, 50, 0.5),
-        ('hopper-medium-expert-v2', 3, 0, 0.5),
+        ('hopper-medium-expert-v2', 3, 50, 0.5),
         ('walker2d-medium-expert-v2', 5, 50, 0.5),
         ('halfcheetah-medium-v2', 1, 50, 0.5),
         ('hopper-medium-v2', 1, 50, 0.5),

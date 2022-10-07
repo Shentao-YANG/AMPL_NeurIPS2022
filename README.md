@@ -1,11 +1,21 @@
-# Weighted Model-based Reinforcement Learning
+# Offline Alternating Model-Policy Learning
 Source codes for the experiments in [A Unified Framework for Alternating Offline Model Training and Policy Learning]( ).
+
+Bibtex:
+```angular2html
+@inproceedings{yang2022unified,
+  title={A Unified Framework for Alternating Offline Model Training and Policy Learning},
+  author={Shentao Yang and Shujian Zhang and Yihao Feng and Mingyuan Zhou},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2022}
+}
+```
 
 ## Installation
 1. Install basic packages, using *e.g.*,
 ```angular2html
-conda create -n wmbrl python=3.8.5
-conda activate wmbrl
+conda create -n ampl python=3.8.5
+conda activate ampl
 pip install numpy matplotlib seaborn gym==0.17.0 torch==1.10.1 cudatoolkit==11.1.74
 ```
 and adding other possible dependencies.
@@ -33,19 +43,19 @@ The normalized scores are calculated by the D4RL package.
 ### Algorithmic Variants
 Below lists the commands for the variants used in our ablation study.
 
-* No weighted model retraining (train model only once in the beginning using MLE)
+* No weighted model-retraining (train the model only once in the beginning using MLE)
 ```angular2html
 python submit_jobs_server_gan.py --model_retrain_period=1000
 ```
-* Use VPM to train MIW model
+* Use VPM to train the MIW model
 ```angular2html
 python submit_jobs_server_gan.py --dr_method="VPM" --weight_output_clipping="True"
 ```
-* Use GenDICE to train MIW model
+* Use GenDICE to train the MIW model
 ```angular2html
 python submit_jobs_server_gan.py --dr_method="GenDICE" --weight_output_clipping="True"
 ```
-* Use DualDICE to train MIW model
+* Use DualDICE to train the MIW model
 ```angular2html
 python submit_jobs_server_gan.py --dr_method="DualDICE" --weight_output_clipping="True"
 ```
@@ -61,11 +71,11 @@ python submit_jobs_server_gan.py --weighted_policy_training='True' --use_kl_dual
 ```angular2html
 python submit_jobs_server_gan.py --weighted_policy_training='True' --use_kl_dual='True' --use_weight_wpr='False'
 ```
-* Gaussian policy + JSD for policy training
+* Gaussian policy + JSD for the policy training
 ```angular2html
 python submit_jobs_server_gan.py --use_gaussian_policy='True'
 ```
-* No regularization in policy training
+* No regularization in the policy training
 ```angular2html
 python submit_jobs_server_gan.py --remove_reg='True'
 ```
@@ -77,7 +87,7 @@ python submit_jobs_server_gan.py --real_data_pct=1.
 ```angular2html
 python submit_jobs_server_gan.py --use_reward_test_func='True'
 ```
-* Use Value-function as discriminator to train model
+* Use value-function as the discriminator to train the model
 ```angular2html
 python submit_jobs_server_gan.py --q_dis_model='True'
 ```
