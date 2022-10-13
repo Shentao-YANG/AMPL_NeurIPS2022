@@ -1,5 +1,6 @@
 # Offline Alternating Model-Policy Learning
-Source codes for the experiments in [A Unified Framework for Alternating Offline Model Training and Policy Learning]( ).
+Source codes for the experiments in *A Unified Framework for Alternating Offline Model Training and Policy Learning*.
+[[Paper]](https://arxiv.org/abs/2210.05922), [[Poster]](https://github.com/Shentao-YANG/AMPL_NeurIPS2022/blob/main/NeurIPS_2022_AMPL_poster.pdf), [[Slides]](https://github.com/Shentao-YANG/AMPL_NeurIPS2022/blob/main/NeurIPS_2022_AMPL_slides.pdf).
 
 Bibtex:
 ```angular2html
@@ -7,7 +8,8 @@ Bibtex:
   title={A Unified Framework for Alternating Offline Model Training and Policy Learning},
   author={Shentao Yang and Shujian Zhang and Yihao Feng and Mingyuan Zhou},
   booktitle={Advances in Neural Information Processing Systems},
-  year={2022}
+  year={2022},
+  url={https://arxiv.org/abs/2210.05922}
 }
 ```
 
